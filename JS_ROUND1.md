@@ -330,9 +330,7 @@ let b = undefined;
 console.log(b); // undefined → explicitly set to undefined
 
 ✅ Example:
-javascript
-Copy
-Edit
+
 function greet() {}
 console.log(greet()); // undefined → no return value
 🔹 2. null
@@ -341,9 +339,7 @@ Represents the intentional absence of any object value.
 Used to explicitly indicate "no value" or "no object".
 
 ✅ Example:
-javascript
-Copy
-Edit
+
 let user = null; 
 console.log(user); // null → user is intentionally set to have no value
 
@@ -357,9 +353,7 @@ Assignment	Automatically assigned to uninitialized variables	Explicitly assigned
 Default Return Value	Default return value for functions without a return statement	Not used as a return value unless explicitly assigned
 
 🧪 Example of null and undefined in Comparison:
-javascript
-Copy
-Edit
+
 let a;
 let b = null;
 
@@ -402,45 +396,31 @@ typeof operand;
 
 🔹 Examples:
 ✅ Checking undefined:
-javascript
-Copy
-Edit
+ 
 let a;
 console.log(typeof a); // "undefined" → variable is declared but not initialized
 ✅ Checking boolean:
-javascript
-Copy
-Edit
+ 
 let isActive = true;
 console.log(typeof isActive); // "boolean"
 ✅ Checking number:
-javascript
-Copy
-Edit
+ 
 let age = 25;
 console.log(typeof age); // "number"
 ✅ Checking bigint:
-javascript
-Copy
-Edit
+ 
 let bigNumber = 12345678901234567890n;
 console.log(typeof bigNumber); // "bigint"
 ✅ Checking string:
-javascript
-Copy
-Edit
+ 
 let name = "John";
 console.log(typeof name); // "string"
 ✅ Checking symbol:
-javascript
-Copy
-Edit
+ 
 let symbol = Symbol("id");
 console.log(typeof symbol); // "symbol"
 ✅ Checking object:
-javascript
-Copy
-Edit
+ 
 let user = { name: "Alice", age: 30 };
 console.log(typeof user); // "object"
 
@@ -450,9 +430,7 @@ console.log(typeof arr); // "object" (arrays are also objects)
 let obj = null;
 console.log(typeof obj); // "object" (this is a historical JavaScript bug)
 ✅ Checking function:
-javascript
-Copy
-Edit
+ 
 function greet() {}
 console.log(typeof greet); // "function"
 
