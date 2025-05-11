@@ -164,7 +164,7 @@ user = { name: "Charlie" }; // ❌ TypeError: Assignment to constant variable
 const list = [1, 2, 3];
 list.push(4); // ✅ Allowed
 list = [5, 6]; // ❌ TypeError
-END```
+END
 
 ---
 
