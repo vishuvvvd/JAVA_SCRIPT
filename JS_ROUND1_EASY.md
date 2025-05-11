@@ -65,8 +65,9 @@ You can embed variables and expressions inside a string using the `${}` syntax.
 const name = "Vishal";
 const greeting = `Hello, ${name}!`;
 console.log(greeting); // Output: Hello, Vishal!
+```
 
----
+
 ## 📘 What is Hoisting in JavaScript?
 
 ### ❓ Definition
@@ -75,7 +76,6 @@ console.log(greeting); // Output: Hello, Vishal!
 
 This means you can use variables and functions **before** you declare them — though the behavior differs for `var`, `let`, `const`, and function declarations.
 
----
 
 ### 🧠 Key Points
 
@@ -83,21 +83,18 @@ This means you can use variables and functions **before** you declare them — t
 - **`var` declarations** are hoisted but initialized with `undefined`.
 - **`let` and `const`** are hoisted too, but are **not initialized**, leading to a **Temporal Dead Zone (TDZ)** — using them before declaration throws a `ReferenceError`.
 
----
 
 ### ✅ Example 1: Hoisting with `var`
 
 ```javascript
 console.log(x); // Output: undefined
 var x = 5;
-
----
+```
 
 ## 📘 Difference Between `var`, `let`, and `const` in JavaScript
 
 In JavaScript, `var`, `let`, and `const` are used to declare variables. They differ in **scope**, **hoisting behavior**, **re-declaration**, and **mutability**.
 
----
 
 ## 🔍 Comparison Table
 
@@ -109,7 +106,6 @@ In JavaScript, `var`, `let`, and `const` are used to declare variables. They dif
 | **Re-assignment**     | ✅ Allowed                    | ✅ Allowed                    | ❌ Not allowed               |
 | **Default Usage**     | Legacy code, avoid in modern JS | Modern variable declaration | Constants or final variables |
 
----
 
 ## ✅ Example: Scope
 
@@ -164,15 +160,13 @@ user = { name: "Charlie" }; // ❌ TypeError: Assignment to constant variable
 const list = [1, 2, 3];
 list.push(4); // ✅ Allowed
 list = [5, 6]; // ❌ TypeError
-END
+```
 
----
 
 ## 📘 JavaScript Data Types
 
 JavaScript provides different **data types** to hold various kinds of values. These types are categorized into **primitive** and **non-primitive (reference)** types.
 
----
 
 ## 📂 Categories of Data Types
 
@@ -190,7 +184,7 @@ These are the most basic data types and **do not have properties or methods**.
 | `Symbol`  | Unique and immutable identifiers        | `Symbol("id")`    |
 | `BigInt`  | For large integers beyond `2^53 - 1`    | `123456789012345678901234567890n` |
 
----
+
 
 ### 2. 🗂️ **Non-Primitive (Reference) Data Types**
 
@@ -203,7 +197,7 @@ These hold **collections of values** or **more complex entities**.
 | `Function` | Callable object (a type of object)     | `function greet() {}`          |
 | `Date`, `RegExp`, etc. | Built-in object types      | `new Date()`, `/abc/`          |
 
----
+
 
 ## 🔍 Type Checking
 
@@ -221,7 +215,7 @@ typeof { name: "A" }; // "object"
 typeof [1, 2, 3];     // "object"
 typeof function(){};  // "function"
 ```
----
+
 
 ## 🔹 6. JavaScript Arrays
 
@@ -328,32 +322,33 @@ console.log(a); // undefined → a is declared but not initialized
 
 let b = undefined;
 console.log(b); // undefined → explicitly set to undefined
-
-✅ Example:
-
+```
+### ✅ Example:
+```javascript
 function greet() {}
 console.log(greet()); // undefined → no return value
-🔹 2. null
-Represents the intentional absence of any object value.
+```
+## 🔹 2. null
+- Represents the intentional absence of any object value.
+- Used to explicitly indicate "no value" or "no object".
 
-Used to explicitly indicate "no value" or "no object".
-
-✅ Example:
-
+### ✅ Example:
+```javascript
 let user = null; 
 console.log(user); // null → user is intentionally set to have no value
 
 let obj = { name: "Alice", age: null }; 
 console.log(obj.age); // null → age property is explicitly set to null
-🔍 Key Differences Between null and undefined
-Feature	undefined	null
-Type	undefined (primitive)	object (historical bug)
-Represents	A variable that has been declared but not assigned a value	An intentional absence of any object value
-Assignment	Automatically assigned to uninitialized variables	Explicitly assigned to represent no value
-Default Return Value	Default return value for functions without a return statement	Not used as a return value unless explicitly assigned
+```
+### 🔍 Key Differences Between null and undefined
+- Feature	undefined	null
+- Type	undefined (primitive)	object (historical bug)
+- Represents	A variable that has been declared but not assigned a value	An intentional absence of any object value
+- Assignment	Automatically assigned to uninitialized variables	Explicitly assigned to represent no value
+- Default Return Value	Default return value for functions without a return statement	Not used as a return value unless explicitly assigned
 
-🧪 Example of null and undefined in Comparison:
-
+## 🧪 Example of null and undefined in Comparison:
+```javascript
 let a;
 let b = null;
 
@@ -361,23 +356,25 @@ console.log(a == b);    // true → both are falsy values but represent differen
 console.log(a === b);   // false → different types (undefined vs object)
 console.log(a == undefined);  // true → a is undefined
 console.log(b == null);       // true → b is explicitly null
-📝 Summary
+```
+
+### 📝 Summary
 undefined is the default value for uninitialized variables and functions with no return statement.
 
 null is an explicit assignment to represent no value or no object.
 
----
 
 ## Explain the use of typeof operator.?
 The **`typeof`** operator is used to check the **data type** of a given variable or expression in JavaScript. It returns a string that represents the type of the operand.
 
----
 
 ## 🔹 Syntax:
 
 ```javascript
 typeof operand;
-🔹 Return Values of typeof:
+```
+
+### 🔹 Return Values of typeof:
 "undefined" — If the operand is undefined.
 
 "boolean" — If the operand is a boolean value.
@@ -394,33 +391,45 @@ typeof operand;
 
 "function" — If the operand is a function.
 
-🔹 Examples:
-✅ Checking undefined:
- 
+### 🔹 Examples:
+- ✅ Checking undefined:
+```javascript
 let a;
 console.log(typeof a); // "undefined" → variable is declared but not initialized
-✅ Checking boolean:
- 
+``` 
+
+- ✅ Checking boolean:
+```javascript
 let isActive = true;
 console.log(typeof isActive); // "boolean"
-✅ Checking number:
- 
+```
+
+- ✅ Checking number:
+ ```javascript
 let age = 25;
 console.log(typeof age); // "number"
-✅ Checking bigint:
- 
+```
+
+- ✅ Checking bigint:
+ ```javascript
 let bigNumber = 12345678901234567890n;
 console.log(typeof bigNumber); // "bigint"
-✅ Checking string:
- 
+```
+
+- ✅ Checking string:
+ ```javascript
 let name = "John";
 console.log(typeof name); // "string"
-✅ Checking symbol:
- 
+```
+
+- ✅ Checking symbol:
+ ```javascript
 let symbol = Symbol("id");
 console.log(typeof symbol); // "symbol"
-✅ Checking object:
- 
+```
+
+- ✅ Checking object:
+ ```javascript
 let user = { name: "Alice", age: 30 };
 console.log(typeof user); // "object"
 
@@ -429,9 +438,10 @@ console.log(typeof arr); // "object" (arrays are also objects)
 
 let obj = null;
 console.log(typeof obj); // "object" (this is a historical JavaScript bug)
-✅ Checking function:
- 
+```
+
+- ✅ Checking function:
+ ```javascript
 function greet() {}
 console.log(typeof greet); // "function"
-
 ```
